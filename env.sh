@@ -1,0 +1,5 @@
+export RUSTUP_HOME="/usr/local/rustup"
+export CARGO_HOME="/usr/local/cargo"
+export PATH="$PATH:/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export RUST_VERSION="1.70.0"
+export USER="root"
