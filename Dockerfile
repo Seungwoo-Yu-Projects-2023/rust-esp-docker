@@ -2,14 +2,14 @@ FROM rust:bookworm
 
 EXPOSE 22
 
+RUN ["apt", "update"]
+RUN apt install pkg-config libusb-1.0-0-dev libftdi1-dev libudev-dev python3-pip python3-virtualenv -y
+
 RUN ["cargo", "install", "cargo-generate"]
 RUN ["cargo", "install", "ldproxy"]
 RUN ["cargo", "install", "espflash"]
 RUN ["cargo", "install", "espup"]
 RUN ["espup", "install"]
-
-RUN ["apt", "update"]
-RUN apt install python3-pip python3-virtualenv -y
 
 COPY env.sh /root/env.sh
 RUN chmod +x ~/env.sh
